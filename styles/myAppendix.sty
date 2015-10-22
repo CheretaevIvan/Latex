@@ -1,0 +1,19 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%
+%%% подключение пакета приложений
+%%%
+\usepackage[title,titletoc]{appendix}
+\usepackage{textcase}
+
+\newcounter{appendcount}
+\setcounter{appendcount}{1}
+\renewcommand{\theappendcount}{\Asbuk{appendcount}}
+
+\renewcommand{\appendixname}{ПРИЛОЖЕНИЕ}
+
+\renewcommand{\appendix}[1]{
+	\newpage 
+	\raggedleft \appendixname \space \theappendcount. \MakeTextUppercase{#1}
+	\addcontentsline{toc}{likechapter}{\appendixname~\theappendcount.~#1}
+	\stepcounter{appendcount}
+}

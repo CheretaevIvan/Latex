@@ -1,0 +1,215 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%
+%%% подключение и настройка пакета листингов
+%%%
+
+	\definecolor{dkgreen}{rgb}{0,0.6,0}
+	\definecolor{gray}{rgb}{0.5,0.5,0.5}
+	\definecolor{mauve}{rgb}{0.58,0,0.82}
+	\definecolor{light-gray}{gray}{0.25}
+	
+	%\usepackage{listingsutf8}	
+	\usepackage{listings}
+	\renewcommand{\lstlistingname}{Листинг}
+	\lstset{
+		language=C++,
+		tabsize=4,
+		breaklines=true,
+		columns=fullflexible,
+		flexiblecolumns,
+		frame=tb ,
+		numbers=left,
+		numberstyle=\footnotesize\color{gray},
+		frame=L,
+%		escapechar = |, % можно вывалиться в \LaTeX 
+		escapebegin={***},
+		escapeend={***},
+		% extendedchars = false,
+		showstringspaces=false,
+		extendedchars = true, 
+				%% да именно так но не  \true
+				%% \true == false
+		inputencoding=cp1251,
+%		inputencoding = \globalEncoding, % кодировка, очень аккуратно ту
+		keepspaces = true,
+		belowcaptionskip=5pt,
+		basicstyle={\footnotesize\ttfamily},
+		xleftmargin=\parindent,
+		stringstyle=\color{orange}
+	}
+
+	%% Основной стиль
+	\lstset{
+		basicstyle=\color[rgb]{0.0,0.0,0.0},
+	}
+
+	
+	%% Комментарии
+	\lstset{
+		commentstyle=\color[rgb]{0,0.5,0}\itshape,
+		morecomment=[s]{/*}{*/}, 
+		morestring=[b]", 
+		morestring=[d]
+	}
+
+	%% Ключевые слова
+	\lstset{
+			keywordsprefix={\\},
+			keywordstyle=\color{blue}
+	}
+	
+	\lstdefinestyle{java}{
+		language=Java,
+		aboveskip=3mm,
+		belowskip=3mm,
+		showstringspaces=false,
+		columns=flexible,
+		basicstyle={\footnotesize\ttfamily},
+		numberstyle={\tiny},
+		numbers=left,
+		keywordstyle=\color{blue},
+		commentstyle=\color{dkgreen},
+		stringstyle=\color{mauve},
+		breaklines=true,
+		breakatwhitespace=true,
+		tabsize=3
+	}
+	
+	\lstdefinestyle{bytecode}{
+		otherkeywords={invokedynamic},
+		language=JVMIS,
+		aboveskip=3mm,
+		belowskip=3mm,
+		showstringspaces=false,
+		columns=flexible,
+		basicstyle={\footnotesize\ttfamily},
+		numberstyle={\tiny},
+		numbers=left,
+		keywordstyle=\color{blue},
+		commentstyle=\color{dkgreen},
+		stringstyle=\color{mauve},
+		breaklines=true,
+		breakatwhitespace=true,
+		tabsize=3
+	}
+	
+	\lstdefinestyle{fsharp} {	
+		morekeywords={let, new, match, with, rec, 
+			open, module, namespace, type, of, member, 
+			and, for, while, true, false, in, do, begin, 
+			end, fun, function, return, yield, try, val, 
+			mutable, if, then, else, cloud, async, static, 
+			use, abstract, interface, inherit, finally, maybe, option },
+		otherkeywords={ let!, return!, do!, yield!, use!, var, from, select, where, order},
+		keywordstyle=\color{blue},
+		sensitive=true,
+		aboveskip=3mm,
+		belowskip=3mm,
+		showstringspaces=false, 
+		columns=flexible,
+		basicstyle={\footnotesize\ttfamily},
+		numberstyle={\tiny},
+		numbers=left,
+		breaklines=true,
+		upquote=true,
+		tabsize=3,
+		morecomment=[l][\color{dkgreen}]{///},
+		morecomment=[l][\color{dkgreen}]{//},
+		morecomment=[s][\color{dkgreen}]{{(*}{*)}},
+		morestring=[b]",
+		showstringspaces=false,
+		literate={`}{\`}1,
+		stringstyle=\color{mauve}
+	}
+	
+	\lstdefinestyle{csharp} {
+		aboveskip=3mm,
+		belowskip=3mm,
+		showstringspaces=false,
+		columns=flexible,
+		basicstyle={\footnotesize\ttfamily},
+		numberstyle={\tiny},
+		numbers=left,
+		keywordstyle=\color{blue},
+		commentstyle=\color{dkgreen},
+		stringstyle=\color{mauve},
+		breaklines=true,
+		breakatwhitespace=true,
+		tabsize=3,
+		morecomment = [l]{//}, 
+		morecomment = [l]{///},
+		morecomment = [s]{/*}{*/},
+		morestring=[b]", 
+		sensitive = true,
+		morekeywords = {async, await, abstract,  
+			event,  new,  struct,
+			as,  explicit,  null,  switch,
+			base,  extern,  object,  this,
+			bool,  false,  operator,  throw,
+			break,  finally,  out,  true,
+			byte,  fixed,  override,  try,
+			case,  float,  params,  typeof,
+			catch,  for,  private,  uint,
+			char,  foreach,  protected,  ulong,
+			checked,  goto,  public,  unchecked,
+			class,  if,  readonly,  unsafe,
+			const,  implicit,  ref,  ushort,
+			continue,  in,  return,  using,
+			decimal,  int,  sbyte,  virtual,
+			default,  interface,  sealed,  volatile,
+			delegate,  internal,  short,  void,
+			do,  is,  sizeof,  while,
+			double,  lock,  stackalloc,   
+			else,  long,  static,   
+			enum,  namespace,  string }
+	}
+	
+	\lstdefinestyle{scala} {  
+		morekeywords={ abstract,case,catch,
+			char,class,
+			def,else,extends,final,
+			if,import,
+			match,module,new,null,object,
+			override,package,private,protected,
+			public,return,super,this,throw,
+			trait,try,type,val,var,with,implicit,
+			macro,sealed
+		},
+		sensitive,
+		morecomment=[l]//,
+		morecomment=[s]{/*}{*/},
+		morestring=[b]",
+		morestring=[b]',
+		aboveskip=3mm,
+		belowskip=3mm,
+		showstringspaces=false,
+		columns=flexible,
+		basicstyle={\footnotesize\ttfamily},
+		numberstyle={\tiny},
+		numbers=left,
+		keywordstyle=\color{blue},
+		commentstyle=\color{dkgreen},
+		stringstyle=\color{mauve},
+		breaklines=true,
+		breakatwhitespace=true,
+		tabsize=3
+	}
+	
+	\lstdefinestyle{SQL}{
+		language={SQL}, 
+		moredelim=**[is][\slshape]{`}{`},
+		moredelim=**[is][\color{orange}]{@}{@},
+		showstringspaces=false,
+		columns=flexible,
+		basicstyle={\footnotesize\ttfamily},
+		morestring=[b]',
+		numberstyle={\tiny},
+		numbers=left,
+		keywordstyle=\color{blue},
+		commentstyle=\color{dkgreen},
+		stringstyle=\color{mauve},
+		morekeywords = { use, if, datetime, 
+			name, dbo, bulk, 
+			with, fieldterminator, datafiletype, 
+			go }
+	}
