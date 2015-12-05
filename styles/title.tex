@@ -15,9 +15,12 @@
 	\vspace*{8em plus .6em minus .5em}
 	
 	\begin{tabular}[b]{p{0.4\linewidth} p{0.4\linewidth}}
-		Преподаватель & \raggedleft{\theTeacher} \arraybackslash\\
-		Студент & \raggedleft{\theStudentOne} \arraybackslash\\
-%		 & \raggedleft{\theStudentTwo} \arraybackslash\\
+		Преподаватель & \raggedleft{\theTeacher} \arraybackslash\\ 
+		
+		\ifnum\theStudentsCount=1 Студент\else Студенты\fi & \raggedleft{\theStudents} \arraybackslash
+		
+		%& \raggedleft{\theStudent} \arraybackslash\\
+		\\
 		Группа & \raggedleft{\theGroup} \arraybackslash\\	
 	\end{tabular}
 	

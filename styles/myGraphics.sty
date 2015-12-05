@@ -7,6 +7,7 @@
 % Картинки
 % -------------------------------------------------------
 
+	\usepackage{float}
 	\ifpdf 
 		\usepackage[pdftex]{graphicx} 
 	\else
@@ -58,7 +59,7 @@
 		}
 	\renewcommand{\thesubfigure}{\asbuk{subfigure}}
 	\newcommand{\graphic}[3]{
-		\begin{figure}
+		\begin{figure}[H]
 			\centering
 			\includegraphics[scale=#2]{\IMG/#1}
 			\caption{#3}

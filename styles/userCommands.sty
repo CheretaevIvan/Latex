@@ -21,5 +21,10 @@
 %%% создание новых комад форматирования (by US Marine)
 %%%
 
+\usepackage{fancyvrb,standalone}
+\newcommand{\rtfcode}[1]{
+{\VerbatimOut{#1}}
+{\endVerbatimOut\immediate\write18{rtf2latex2e #1}%
+	\input{#1}}}
 
 

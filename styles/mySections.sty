@@ -8,15 +8,13 @@
 	{\filcenter}
 	{\thechapter. }{1pt}{\MakeUppercase}
 	
-	\titleformat{\section}
+	\titleformat{\section}[hang]
 	{\normalsize}
-	{\thesection. }
-	{1pt}{}
+	{\thesection. }{1pt}{}
 	
 	\titleformat{\subsection}
 	{\normalsize}
-	{\thesubsection. }
-	{1pt}{}
+	{\thesubsection. }{1pt}{}
 	
 	% Настройка вертикальных и горизонтальных отступов
 	\titlespacing*{\chapter}{0pt}{0pt}{18pt}
@@ -44,4 +42,4 @@
 		
 	\newcommand{\l@likechapter}[2]{{\@dottedtocline{1}{10pt}{15pt}{#1}{#2}}}
 	\renewcommand{\l@chapter}[2]{{\@dottedtocline{1}{10pt}{15pt}{#1}{#2}}}
-	\renewcommand{\l@section}[2]{{\@dottedtocline{2}{10pt}{25pt}{\hspace{31pt}#1}{#2}}}
+	\renewcommand{\l@section}[2]{{\@dottedtocline{2}{10pt}{35pt}{\hspace{31pt}#1}{#2}}}
