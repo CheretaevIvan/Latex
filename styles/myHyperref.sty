@@ -2,6 +2,7 @@
 %%%
 %%% подключение пакета гиперссылок
 %%%
+	
 	\ifpdf
 		\usepackage[pdftex]{hyperref} 
 		% настройка ссылок в оглавлении для pdf формата 
@@ -23,7 +24,8 @@
 	\else 
 		\usepackage{hyperref} 
 	\fi
-	
+	\usepackage[russian]{varioref}
+	\usepackage{nameref}
 %	\usepackage[
 %		bookmarks = true,		% используем закладки
 %		bookmarksopen = true, 	% закладки открыты

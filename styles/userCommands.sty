@@ -21,10 +21,34 @@
 %%% создание новых комад форматирования (by US Marine)
 %%%
 
+\usepackage{natbib}
+
 \usepackage{fancyvrb,standalone}
 \newcommand{\rtfcode}[1]{
 {\VerbatimOut{#1}}
 {\endVerbatimOut\immediate\write18{rtf2latex2e #1}%
 	\input{#1}}}
 
+\newcommand{\rip}{
+	\marginpar{
+		\includegraphics[width=1.5\marginparwidth]{\globalPictureDir/rip}
+	}
+}
 
+\newcommand{\bulb}{
+	\normalmarginpar\marginpar{
+		\includegraphics[width=1.5\marginparwidth]{\globalPictureDir/bulb}
+	}
+}
+
+\newcommand{\exclamation}{
+	\normalmarginpar\marginpar{
+		\includegraphics[width=1.5\marginparwidth]{\globalPictureDir/exclamation}
+	}
+}
+
+\newcommand{\homework}{
+	\reversemarginpar\marginpar{
+		\includegraphics[width=2\marginparwidth]{\globalPictureDir/homework}
+	}
+}

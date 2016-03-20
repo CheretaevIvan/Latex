@@ -29,7 +29,7 @@
 %%%	
 	\usepackage{tocloft}
 	
-	\renewcommand{\cfttoctitlefont}{\hspace{0.38\textwidth} \bfseries\MakeUppercase}
+	\renewcommand{\cfttoctitlefont}{\hspace{0.38\textwidth} \MakeUppercase}
 	\renewcommand{\cftbeforetoctitleskip}{-1em}
 	%	\renewcommand{\cftaftertoctitle}{\mbox{}\hfill \\ \mbox{}\hfill{\footnotesize Стр.}\vspace{-2.5em}}
 	\renewcommand{\cftchapfont}{\MakeUppercase}
@@ -38,8 +38,9 @@
 	\renewcommand{\cftbeforechapskip}{1em}
 	\renewcommand{\cftparskip}{-1mm}
 	\renewcommand{\cftdotsep}{2}
+
 	\setcounter{tocdepth}{2} % задать глубину оглавления — до subsection включительно
+	
 		
-	\newcommand{\l@likechapter}[2]{{\@dottedtocline{1}{10pt}{15pt}{#1}{#2}}}
-	\renewcommand{\l@chapter}[2]{{\@dottedtocline{1}{10pt}{15pt}{#1}{#2}}}
-	\renewcommand{\l@section}[2]{{\@dottedtocline{2}{10pt}{35pt}{\hspace{31pt}#1}{#2}}}
+	\renewcommand{\l@chapter}[2]{{\@dottedtocline{1}{10pt}{25pt}{#1}{#2}}}
+	\renewcommand{\l@section}[2]{{\@dottedtocline{2}{35pt}{40pt}{#1}{#2}}}

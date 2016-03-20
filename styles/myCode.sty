@@ -18,7 +18,7 @@
 		columns=fullflexible,
 		flexiblecolumns,
 		frame=tb ,
-		numbers=left,
+%		numbers=left,
 		numberstyle=\footnotesize\color{gray},
 		frame=L,
 %		escapechar = |, % можно вывалиться в \LaTeX 
@@ -127,9 +127,8 @@
 		belowskip=3mm,
 		showstringspaces=false,
 		columns=flexible,
-		basicstyle={\footnotesize\ttfamily},
+		basicstyle={\color{gray}\footnotesize\ttfamily},
 		numberstyle={\tiny},
-		numbers=left,
 		keywordstyle=\color{blue},
 		commentstyle=\color{dkgreen},
 		stringstyle=\color{mauve},
@@ -197,21 +196,26 @@
 	
 	\lstdefinestyle{SQL}{
 		language={SQL}, 
+		basicstyle={\color{gray}\footnotesize\ttfamily},
 		moredelim=**[is][\slshape]{`}{`},
-		moredelim=**[is][\color{orange}]{@}{@},
+		moredelim=**[is][\color{cyan}]{@}{@},
+		literate={@}{@}1,
 		showstringspaces=false,
-		columns=flexible,
-		basicstyle={\footnotesize\ttfamily},
+		columns=flexible,		
 		morestring=[b]',
 		numberstyle={\tiny},
-		numbers=left,
+		numbers=none,		
 		keywordstyle=\color{blue},
 		commentstyle=\color{dkgreen},
-		stringstyle=\color{mauve},
+		stringstyle=\color{red},
 		morekeywords = { use, if, datetime, 
-			name, dbo, bulk, 
+			bulk, 
 			with, fieldterminator, datafiletype, 
-			go }
+			go,
+			restore, database, norecovery, recovery, log,
+			references,
+			money, nvarchar
+			}
 	}
 	
 	\lstdefinestyle{python}
@@ -227,3 +231,71 @@
 			int,
 		},
 	}
+	
+	\lstdefinestyle{oneC}
+	{
+		language=C++,
+		tabsize=4,
+		breaklines=true,
+		columns=fullflexible,
+		flexiblecolumns,
+		frame=tb ,
+		numbers=left,
+		numberstyle=\footnotesize\color{gray},
+		frame=L,
+		escapebegin={***},
+		escapeend={***},
+		showstringspaces=false,
+		extendedchars = true, 
+		keepspaces = true,
+		belowcaptionskip=5pt,
+		basicstyle={\small\tt},
+		xleftmargin=\parindent,
+		stringstyle=\color{orange},
+		commentstyle=\color{dkgreen},
+		keywordstyle=\color{red}
+	}
+	
+	% Define Language
+	\lstdefinelanguage{cisco}
+	{
+		% list of keywords
+		morekeywords={
+			enable, 
+			configure, terminal, conf, t,
+			secret, 
+			service,
+			password, encryption,
+			ip, address, dhcp, pool,
+			default, router,
+			network,
+			encapsulation, dot1Q,
+			lookup,
+			banner, motd,
+			username,
+			line, console, vty,
+			exec, timeout,
+			login, local, 
+			logging, synchronous,
+			transport, input, ssh,
+			hostname, 
+			vlan, name, native,
+			vtp, mode, server, client, domain,
+			password,
+			version,
+			interface, range, 
+			switchport, trunk, access, allowed, 
+			list, group, in, out,
+			permit, deny,
+			tcp, udp, any, host, eq,
+			exit, end,
+			shutdown,
+			no,
+			copy, running, config, startup
+		},
+		sensitive=false, % keywords are not case-sensitive
+		morecomment=[l]{!}, % l is for line comment
+		basicstyle={\color{gray}\footnotesize\ttfamily},
+%		morecomment=[s]{#}{#}
+	}
+	
