@@ -1,0 +1,40 @@
+\documentclass[a4paper,14pt]{extreport}
+
+\newcommand{\globalEncoding}{utf8}		% кодировка	
+\newcommand{\globalStylesDir}{../styles}	% месторасположение стилей
+\newcommand{\globalSourceDir}{src}	% месторасположение кодов
+\newcommand{\globalPictureDir}{pic}	% месторасположение изображений
+
+% подключаем набор стилей
+\usepackage{\globalStylesDir/main}
+
+\begin{document}
+	% Tитульная страница	
+	\title{Заголовок работы}
+	\subtitle{Подзаголовок}
+	\teachers{2}{Преподаватели}
+	\students{1}{Черетаев И.В.}
+	\group{РИ-420207}
+	\city{Екатеринбург}	
+	\maketitle
+	\setcounter{page}{2} % начать нумерацию страниц с №2
+	
+	% Оглавление
+	\tableofcontents
+	
+	\chapter{Глава 1}
+	
+	\addcontentsline{toc}{chapter}{\bibname}
+	\bibliographystyle{plain}
+	\bibliography{src/lit}
+	
+	\appendix
+	\titleformat{\chapter}[hang]
+	{\filleft}
+	{\thesection. }{1pt}{\MakeUppercase}
+	
+	\newappendix{Пример приложения}
+	\label{append:append1}
+	
+
+\end{document}          
