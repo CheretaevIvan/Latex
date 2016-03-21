@@ -1,18 +1,20 @@
-%\newcommand{\theTeacher}{Учитель}
-%\newcommand{\theStudents}{Студенты}
-%\newcommand{\theGroup}{Группа}
-%\newcommand{\theStudentsCount}{1}
-%\newcommand{\theTitleWork}{Заголовок работы}
-%\newcommand{\theSubTitle}{Подзаголовок}
+\newcommand*{\ministry}[1]{\gdef\@ministry{#1}}
+\newcommand*{\@ministry}{Министерство образования и науки Российской Федерации}
 
-\newcommand*{\city}[1]{\gdef\@city{#1}}
-\newcommand*{\@city}{Город}
+\newcommand*{\university}[1]{\gdef\@university{#1}}
+\newcommand*{\@university}{ФГАОУ ВПО «УрФУ имени Президента России Б.Н. Ельцина»}
+
+\newcommand*{\institute}[1]{\gdef\@institute{#1}}
+\newcommand*{\@institute}{Институт радиоэлектроники и информационных технологий}
+
+\newcommand*{\department}[1]{\gdef\@department{#1}}
+\newcommand*{\@department}{Кафедра информационных технологий}
 
 \newcommand*{\subtitle}[1]{\gdef\@subtitle{#1}}
 \newcommand*{\@subtitle}{Подзаголовок}
 
 \newcommand*{\teachers}[2]{\gdef\@teachersCount{#1}\gdef\@teachers{#2}}
-\newcommand*{\@teachers}{Студент}
+\newcommand*{\@teachers}{Преподаватель}
 \newcommand*{\@teachersCount}{1}
 
 \newcommand*{\controllers}[2]{\gdef\@controllersCount{#1}\gdef\@controllers{#2}}
@@ -26,16 +28,20 @@
 \newcommand*{\group}[1]{\gdef\@group{#1}}
 \newcommand*{\@group}{Группа}
 
+\newcommand*{\city}[1]{\gdef\@city{#1}}
+\newcommand*{\@city}{Город}
+
+
 
 \renewcommand*{\maketitle}{%
 	\begin{titlepage}
 		\center % Center everything on the page
 %----------------------------------------------------------------------------------------
 %		%	HEADING SECTIONS		%----------------------------------------------------------------------------------------	
-		Министерство образования и науки Российской Федерации\\ % Name of ministry	
-		ФГАОУ ВПО «УрФУ имени Президента России Б.Н. Ельцина»\\ % Name of your university	
-		Институт радиоэлектроники и информационных технологий\\ % Name of your institute
-		Кафедра информационных технологий % Name of your department
+		\@ministry \\ % Name of ministry	
+		\@university \\ % Name of your university	
+		\@institute \\ % Name of your institute
+		\@department % Name of your department
 		
 %----------------------------------------------------------------------------------------
 %		%	TITLE SECTIONS		%----------------------------------------------------------------------------------------	
