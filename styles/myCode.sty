@@ -299,3 +299,25 @@
 %		morecomment=[s]{#}{#}
 	}
 	
+	\lstdefinestyle{st}{
+		morekeywords={, FALSE, TRUE,
+			IF, THEN, ELSE, END_IF,
+			FOR, TO, BY, DO, END_FOR,
+			AND, OR, NOT,
+			:=,
+			}
+		language=JVMIS,
+		aboveskip=3mm,
+		belowskip=3mm,
+		showstringspaces=false,
+		columns=flexible,
+		basicstyle={\footnotesize\ttfamily},
+		numberstyle={\tiny},
+		numbers=left,
+		keywordstyle=\color{blue},
+		commentstyle=\color{dkgreen},
+		stringstyle=\color{mauve},
+		breaklines=true,
+		breakatwhitespace=true,
+		tabsize=3
+	}
